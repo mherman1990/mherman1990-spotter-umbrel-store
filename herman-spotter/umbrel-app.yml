@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.1.0"
+version: "0.2.0"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -25,8 +25,9 @@ description: >-
   - Form review from photos and video clips of your sets
 
 
-  Version 0.1 is the foundation release: the app shell, settings, encrypted
-  API key storage, and automatic nightly backups.
+  Version 0.2 adds workout logging: an equipment checklist per location, a
+  750-exercise catalog, progression targets, PRs, e1RM trends, and weekly
+  volume per muscle. The AI coach arrives in a later release.
 
 
   For gym access away from home, use the Tailscale app on your Umbrel.
@@ -48,7 +49,10 @@ backupIgnore:
   - data/backups/*
   - data/exports/*
 releaseNotes: >-
-  First release: app shell, settings, encrypted API key storage, and
-  automatic nightly backups.
+  Workout logging: start a workout, add exercises, and log sets in one tap.
+  Includes per-location equipment checklists, a built-in exercise catalog,
+  progression targets, warm-ups and plate math, PRs, e1RM trends, weekly
+  volume per muscle, and history. Sets are saved on your phone first and
+  sync when the connection allows.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
