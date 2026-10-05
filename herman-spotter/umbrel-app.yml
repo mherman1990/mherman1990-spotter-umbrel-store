@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.4.0"
+version: "0.5.0"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -25,6 +25,12 @@ description: >-
 
   - Form review from videos and photos of your sets, with rep-timestamped
   cues
+
+  - Training blocks you build or the coach designs, with weekly reviews
+  and block retrospectives
+
+  - Optional Strava and TrainingPeaks import so riding load counts toward
+  fatigue; Strong and Hevy history import
 
 
   For gym access away from home, use the Tailscale app on your Umbrel.
@@ -47,11 +53,12 @@ backupIgnore:
   - data/exports/*
   - data/media/tmp/*
 releaseNotes: >-
-  Form review: upload a video of a set (or a photo) and get a rep-by-rep
-  review with timestamps you can tap to jump the video, plus cues, drills
-  and filming tips. Location data is stripped on upload; only a few still
-  frames go to the AI. Also: scan a gym photo to fill in a location's
-  equipment, attach form checks in coach chat, and upload limits in
-  Settings. The app image now includes ffmpeg (larger download).
+  Programs: build a training block or have the coach design one from a
+  short interview; Today shows the next planned session with computed
+  targets. Weekly reviews and end-of-block retrospectives now arrive on
+  their own (written overnight at batch pricing). Optional Strava
+  connection (using your own Strava API app) and TrainingPeaks CSV import
+  bring riding load into fatigue signals and coach answers. Import your
+  history from Strong or Hevy.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
