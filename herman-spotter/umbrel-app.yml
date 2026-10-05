@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.3.0"
+version: "0.3.1"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -51,10 +51,9 @@ backupIgnore:
   - data/backups/*
   - data/exports/*
 releaseNotes: >-
-  AI coach: chat about your training with answers grounded in your logged
-  workouts, equipment- and injury-aware exercise swaps, and typed set entry
-  ("bench 3x8 185 @8"). The coach proposes changes as cards you approve.
-  Settings adds injuries and limitations, monthly AI spend against your
-  cap, and prompt-cache hit rate. Requires an Anthropic API key.
+  Fixes: a screen that hits an error now shows what went wrong and a Reload
+  button instead of going blank, the app reloads itself once if it was left
+  open across an update, and leaving the coach mid-reply no longer keeps the
+  connection open. The reply still finishes and is saved.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
