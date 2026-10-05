@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.5.0"
+version: "0.6.0"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -32,6 +32,9 @@ description: >-
   - Optional Strava and TrainingPeaks import so riding load counts toward
   fatigue; Strong and Hevy history import
 
+  - A training calendar and structured trainer rides, sent to Wahoo or
+  Garmin through intervals.icu
+
 
   For gym access away from home, use the Tailscale app on your Umbrel.
 developer: Matt Herman
@@ -53,12 +56,12 @@ backupIgnore:
   - data/exports/*
   - data/media/tmp/*
 releaseNotes: >-
-  Programs: build a training block or have the coach design one from a
-  short interview; Today shows the next planned session with computed
-  targets. Weekly reviews and end-of-block retrospectives now arrive on
-  their own (written overnight at batch pricing). Optional Strava
-  connection (using your own Strava API app) and TrainingPeaks CSV import
-  bring riding load into fatigue signals and coach answers. Import your
-  history from Strong or Hevy.
+  Calendar: see the week's lifts and rides, move sessions, and see what's
+  on today. Structured rides: starter workouts, a builder, and a coach ride
+  designer, with TSS computed by the app and .zwo/.mrc/.erg downloads.
+  Connect intervals.icu with an API key to send planned rides to your
+  Wahoo or Garmin for ERG mode, put your plan in Outlook or Google through
+  its calendar link, and import completed rides. Also: a calendar link for
+  Apple Calendar, and Settings → Reset training data (backup first).
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter

@@ -8,11 +8,13 @@ services:
       APP_PORT: 3000
       # Umbrel login stays on for everything else. Browsers may fetch PWA icons
       # and the manifest without cookies, so those static files are exempt.
-      PROXY_AUTH_WHITELIST: "/manifest.webmanifest,/icons/*"
+      # /cal/* is the iCal feed: calendar apps can't sign in, so the secret
+      # token in its URL is the credential (unknown tokens get 404).
+      PROXY_AUTH_WHITELIST: "/manifest.webmanifest,/icons/*,/cal/*"
 
   web:
     # The release workflow fills in the image digest (scripts/bump-store.mjs).
-    image: ghcr.io/mherman1990/spotter:0.5.0@sha256:53e0a7e66cf10ed9fb2eb528eab824db129f1204870c144683a52285eb4688c8
+    image: ghcr.io/mherman1990/spotter:0.6.0@sha256:3399f1839a399cafa00588b54b10ebe53cb34cc9553a3bc11f22827c31c0f5bc
     user: "1000:1000"
     init: true
     restart: on-failure
