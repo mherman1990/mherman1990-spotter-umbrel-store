@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.3.1"
+version: "0.3.2"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -51,9 +51,8 @@ backupIgnore:
   - data/backups/*
   - data/exports/*
 releaseNotes: >-
-  Fixes: a screen that hits an error now shows what went wrong and a Reload
-  button instead of going blank, the app reloads itself once if it was left
-  open across an update, and leaving the coach mid-reply no longer keeps the
-  connection open. The reply still finishes and is saved.
+  Fixes the coach never replying: Anthropic rejected its tool definitions.
+  Also fixes the "This screen hit an error" crash when switching screens in
+  newer Chromium browsers such as current Microsoft Edge.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
