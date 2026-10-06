@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.10.0"
+version: "0.9.0"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -44,9 +44,6 @@ description: >-
   - Rate the coach's replies, reviews and plans, and say how each lift felt;
   the coach and next-session targets use it
 
-  - Daily readiness (HRV, resting HR, sleep and how you feel) adjusts the
-  day's loads and sets; back-off sets follow your top set
-
 
   For gym access away from home, use the Tailscale app on your Umbrel.
 developer: Matt Herman
@@ -68,13 +65,15 @@ backupIgnore:
   - data/exports/*
   - data/media/tmp/*
 releaseNotes: >-
-  Readiness now sets the day's targets: HRV, resting heart rate and sleep
-  against your baseline, plus how you rate sleep, soreness and stress when
-  you start a workout, move today's loads and sets by a fixed step (a little
-  heavier on a great day; 5–15% lighter, a set fewer and an easier RPE on a
-  rough one). Log a set with an RPE and the remaining sets are re-worked
-  from that day's e1RM, within 10% of the plan. intervals.icu wellness
-  (resting HR, HRV, sleep, weight and your 1–4 ratings) now comes in with
-  the intervals.icu sync; Apple Health wins where both have a value.
+  Apple Health and a feedback loop for the coach. An iOS Shortcut sends
+  sleep, resting heart rate, HRV and weight (and optionally Apple Watch
+  workouts) to Spotter each morning over Tailscale: sleep and bodyweight
+  pre-fill when you start a workout, Progress charts recovery, and HRV,
+  resting HR and sleep drifting off your baseline counts as a fatigue
+  signal. You can now rate coach replies, reviews, form reviews and
+  programs, and mark how each exercise felt in a finished workout: "too
+  hard" or "hurt" holds the load next time and "too easy" adds a step. The
+  coach, weekly reviews and the program designer read your feedback. Set up
+  the Shortcut in Settings → Integrations → Apple Health.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
