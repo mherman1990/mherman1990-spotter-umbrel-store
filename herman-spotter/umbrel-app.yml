@@ -4,7 +4,7 @@ name: Spotter
 tagline: Strength training log and coach that lives on your Umbrel
 icon: https://raw.githubusercontent.com/mherman1990/spotter-umbrel-store/main/herman-spotter/icon.svg
 category: health
-version: "0.7.0"
+version: "0.8.0"
 port: 3417
 description: >-
   Spotter is a self-hosted strength-training tracker with an AI coach.
@@ -24,7 +24,10 @@ description: >-
   respect your equipment and injuries
 
   - Form review from videos and photos of your sets, with rep-timestamped
-  cues
+  cues; body tracking on the Umbrel counts reps and measures depth, joint
+  angles, tempo and bar path, drawn over the video
+
+  - Compare two clips of the same lift side by side
 
   - Training blocks you build or the coach designs, with weekly reviews
   and block retrospectives
@@ -56,11 +59,14 @@ backupIgnore:
   - data/exports/*
   - data/media/tmp/*
 releaseNotes: >-
-  A new ride builder for structured trainer workouts: drag the power
-  profile to set intensity and duration, add ready-made shapes (warm-up,
-  intervals, over-unders, sprints, pyramids and more) with one click, or
-  type steps like "3x 12m 90% 4m 55%". Time, TSS, IF, NP, average power,
-  work and time in zone update live. Best on a computer; works on a phone.
-  Scheduled rides can be edited in the builder too.
+  Body tracking for form videos. Spotter now finds your joints in each
+  clip on the Umbrel itself (nothing leaves the box), counts reps, and
+  measures depth, hip and knee angles, tempo, pauses, bar path and
+  left/right differences. The skeleton and bar path are drawn over the
+  video and can be switched off. The coach's form review uses these
+  numbers and picks frames at each rep's bottom and lockout. A new compare
+  view plays two clips of the same lift side by side, lined up on the
+  first rep. Tracking takes a minute or two per clip on a Pi 5 and can be
+  turned off in Settings → Media.
 submitter: Matt Herman
 submission: https://github.com/mherman1990/spotter
